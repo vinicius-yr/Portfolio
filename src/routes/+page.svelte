@@ -13,6 +13,9 @@
       y: 30,
       ease: "sine.inOut",
       delay: 0.6,
+      scrollTrigger: {
+        once: true
+      }
     });
 
     gsap.to(text, {

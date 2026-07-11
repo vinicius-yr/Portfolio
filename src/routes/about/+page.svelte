@@ -13,10 +13,11 @@
       y: 10,
       stagger: 0.3,
       duration: 0.5,
+      delay: 0.5,
 
       onComplete: () => {
-        showAnimation = true
-      }
+        showAnimation = true;
+      },
     });
   });
 </script>
@@ -29,6 +30,6 @@
         <p class="text-sm">{text}</p>
       </li>
     {/each}
-    <Skills {showAnimation}/>
+    <Skills {showAnimation} />
   </ul>
 </section>

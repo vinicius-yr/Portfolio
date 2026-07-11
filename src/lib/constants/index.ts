@@ -1,16 +1,20 @@
 export const aboutInfos = [
   {
     subtitle: "Professional Summary",
-    text: `Developer with 3 years of experience, specializing in high-performance and modern applications. Solid experience in development creating responsive and interactive interfaces, REST APIs, relational database, authentication (Auth, OAuth, JWT), and LLMs. Focused on delivering complete, optimized, and scalable solutions. Crafting efficient systems that transform complex problems into simple and intuitive user experiences.`,
+    text: `Full-Stack Web Developer with 4 years of experience building high-performance, modern web applications. Experienced in developing REST APIs, creating responsive and interactive user interfaces, working with relational databases, implementing authentication, using UI libraries, utility libraries, Docker, and LLMs. Focused on delivering complete, optimized, and scalable solutions that transform complex problems into simple, intuitive user experiences.
+`,
   },
   {
-    subtitle: "Work Philosophy",
+    subtitle: "Professional Approach",
     text: `I’m someone who values communication and cares about understanding the meaning and purpose behind the project. I believe that knowing the reason behind things makes every solution smarter, more consistent, and meaningful.`,
   },
   {
-    subtitle: "Intrapersonal Skills",
+    subtitle: "Soft Skills",
     text: `Problem-solving, Logical reasoning, Continuous learning, Self-taught, Effective communication.`,
   },  
+  {
+    subtitle: "Techs"
+  }
 ];
 
 export const techInfos = [
