@@ -4,7 +4,7 @@
   interface Props {
     href?: string;
     children: Snippet;
-    onclick: (e: Event) => void;
+    onclick?: (e: Event) => void;
   }
 
   let { href, children, onclick }: Props = $props();
@@ -18,7 +18,7 @@
       {@render children()}
     </a>
   {:else}
-    <button {onclick}>
+    <button {onclick} class="border p-1 rounded">
       {@render children()}
     </button>
   {/if}
