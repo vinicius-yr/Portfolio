@@ -1,35 +1,36 @@
 <script lang="ts">
   import gsap from "gsap";
+  import Icon from "@iconify/svelte";
 
-  import { Skills } from "$lib/components";
-  import { aboutInfos } from "$lib/constants";
-
-  let showAnimation = $state(false);
-  let texts: HTMLLIElement[] = [];
+  import { Button } from "$lib/components";
+  import { aboutInfos, techInfos } from "$lib/constants";
 
   $effect(() => {
-    gsap.from(texts, {
-      opacity: 0,
-      y: 10,
-      stagger: 0.3,
-      duration: 0.5,
-      delay: 0.5,
-
-      onComplete: () => {
-        showAnimation = true;
-      },
+    gsap.from("#section", { 
+      opacity: 0, 
+      y: 30, 
+      duration: 0.5, 
+      ease: "sine.inOut" 
     });
   });
 </script>
 
-<section>
+<section id="section">
   <ul class="grid gap-6 p-5 max-w-4xl">
-    {#each aboutInfos as { subtitle, text }, i}
-      <li bind:this={texts[i]}>
+    {#each aboutInfos as { subtitle, text }}
+      <li id="subtitleList">
         <h1 class="text-xl uppercase font-bold">{subtitle}</h1>
         <p class="text-sm">{text}</p>
       </li>
     {/each}
-    <Skills {showAnimation} />
+    <ul class="flex gap-3 flex-wrap">
+      {#each techInfos as { href, icon }, i}
+        <li>
+          <Button {href}>
+            <Icon {icon} width={35} height={35} />
+          </Button>
+        </li>
+      {/each}
+    </ul>
   </ul>
 </section>
