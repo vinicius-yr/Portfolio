@@ -92,20 +92,12 @@ export const projects: Projects[] = [
     src: "https://pub-62c5dfe41d464d438e2d2ffd15380060.r2.dev/Screenshot%20From%202026-07-13%2018-15-47.png",
   },
   {
-    href: "https://hiraganaok.pages.dev/",
-    github: "https://github.com/vinicius-yr/hiragana-challenge",
-    name: "ひragana.ok",
+    name: "Mimo Projects",
+    href: "https://mimo-projects.pages.dev",
+    github: "https://github.com/vinicius-yr/mimo_projects",
     description:
-      "A website for practicing hiragana quickly and easily, with a mini-game to test your skills rapidly.",
-    src: "https://pub-62c5dfe41d464d438e2d2ffd15380060.r2.dev/Screenshot%20From%202026-07-13%2018-15-47.png",
-  },
-  {
-    href: "https://hiraganaok.pages.dev/",
-    github: "https://github.com/vinicius-yr/hiragana-challenge",
-    name: "ひragana.ok",
-    description:
-      "A website for practicing hiragana quickly and easily, with a mini-game to test your skills rapidly.",
-    src: "https://pub-62c5dfe41d464d438e2d2ffd15380060.r2.dev/Screenshot%20From%202026-07-13%2018-15-47.png",
+      "One of the first independent projects I did after completing my programming course.",
+    src: "https://pub-62c5dfe41d464d438e2d2ffd15380060.r2.dev/Screenshot%20From%202026-07-13%2022-04-48.png",
   },
 ];
 
