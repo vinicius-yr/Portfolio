@@ -12,13 +12,13 @@
 
 </script>
 
-<div class="cursor pointer duration-300 hover:translate-1">
+<div>
   {#if href}
-    <a {href} target="_blank" rel="noopener noreferrer">
+    <a {href} class="cursor-pointer text-sm" target="_blank" rel="noopener noreferrer">
       {@render children()}
     </a>
   {:else}
-    <button {onclick} class="border p-1 rounded">
+    <button {onclick} class="cursor-pointer border p-1 rounded text-sm hover:bg-base-300">
       {@render children()}
     </button>
   {/if}

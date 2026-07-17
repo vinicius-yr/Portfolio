@@ -4,12 +4,11 @@
     { href: "/about", text: "About" },
     { href: "/projects", text: "Last Projects" },
     { href: "/contact", text: "Contact" },
-  ])
-
+  ]);
 </script>
 
 <header class="navbar">
-  <nav class="flex justify-center items-center gap-3 w-full">
+  <nav class="flex justify-center  items-center gap-3 w-full">
     <ul class="flex gap-3">
       {#each navList as { href, text }}
         <li>

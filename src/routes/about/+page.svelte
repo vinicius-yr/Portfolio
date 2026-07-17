@@ -10,7 +10,6 @@
       opacity: 0, 
       y: 30, 
       duration: 0.5, 
-      ease: "sine.inOut" 
     });
   });
 </script>

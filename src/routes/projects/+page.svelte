@@ -1,7 +1,8 @@
 <script lang="ts">
+  import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
   import Icon from "@iconify/svelte";
   import gsap from "gsap";
-  import '@splidejs/svelte-splide/css';
 
   import { Button } from "$lib/components";
   import { projects } from "$lib/constants";
@@ -12,7 +13,6 @@
       opacity: 0,
       y: 30,
       duration: 0.5,
-      ease: "sine.inOut",
     });
   });
 </script>
@@ -22,15 +22,15 @@
   options={{
     type: "loop",
     gap: "2rem",
-    width: "70rem",
-    padding: "5rem",
+    width: "60rem",
+    padding: "5.5rem",
     autoplay: true,
     arrows: false,
     interval: 2000,
     pagination: false,
     breakpoints: {
       1024: {
-        width: "45rem",
+        width: "55rem",
       },
       719: {
         width: "30rem",

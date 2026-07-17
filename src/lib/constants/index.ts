@@ -106,5 +106,16 @@ export const projects: Projects[] = [
     description:
       "A website for practicing hiragana quickly and easily, with a mini-game to test your skills rapidly.",
     src: "https://pub-62c5dfe41d464d438e2d2ffd15380060.r2.dev/Screenshot%20From%202026-07-13%2018-15-47.png",
-  },  
+  },
+];
+
+export const socialButtons = [
+  {
+    href: "https://github.com/vinicius-yr",
+    icon: "mdi:github",
+  },
+  {
+    href: "https://www.linkedin.com/in/vinicius-yahagi-rios-360432397",
+    icon: "basil:linkedin-solid",
+  },
 ];
