@@ -12,7 +12,7 @@ export const sendMail = form(
       from: 'Acme <onboarding@resend.dev>',
       to: [EMAIL],
       subject: "New contact from portfolio",
-      html: `Email: ${email} <br/> Name: ${name} - <br/> Message: ${message}`,
+      html: `<b>Email:</b> ${email} <br/> <b>Name:</b> ${name} <br/> <b>Message:</b> ${message}`,
     });
 
     if (error) {
