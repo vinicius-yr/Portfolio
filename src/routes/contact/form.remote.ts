@@ -12,13 +12,11 @@ export const sendMail = form(
       from: 'Acme <onboarding@resend.dev>',
       to: [EMAIL],
       subject: "New contact from portfolio",
-      html: `Email: ${email} <br/> Name:${name} - <br/> Message:${message}`,
+      html: `Email: ${email} <br/> Name: ${name} - <br/> Message: ${message}`,
     });
 
     if (error) {
       return console.error({ error });
     }
-
-    console.log({ data });
   },
 );

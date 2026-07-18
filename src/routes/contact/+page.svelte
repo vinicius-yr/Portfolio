@@ -2,16 +2,33 @@
   import Icon from "@iconify/svelte";
   import gsap from "gsap";
 
-  import { Button } from "$lib/components";
+  import { Button, Toast } from "$lib/components";
   import { socialButtons } from "$lib/constants";
   import { sendMail } from "./form.remote";
 
   const { name, email, message } = $derived(sendMail.fields);
 
+  let toastMessage = $state("");
+  let toastTimer: ReturnType<typeof setTimeout>
+
+function showToast(message: string) {
+  toastMessage = message;
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    toastMessage = "";
+  }, 3000);
+}
+
   $effect(() => {
     gsap.from("#section", { opacity: 0, duration: 0.5, y: 30 });
   });
 </script>
+
+{#if toastMessage}
+  <Toast {toastMessage} />
+{/if}
 
 <section id="section" class="w-full max-w-2xl p-4">
   <p class="text-sm font-bold">
@@ -19,7 +36,21 @@
     need someone to develop, or just want to chat about a project, feel free.
   </p>
 
-  <form {...sendMail}>
+  <form
+    {...sendMail.enhance(async (form) => {
+      try {
+        if (await form.submit()) {
+          form.element.reset();
+
+          showToast("Your message has been sent!");
+        } else {
+          showToast("Please fill in all required fields.");
+        }
+      } catch (error) {
+        showToast("Something went wrong while sending your message.");
+      }
+    })}
+  >
     <fieldset class="fieldset">
       <legend class="fieldset-legend">Name</legend>
       <input
