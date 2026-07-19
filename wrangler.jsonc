@@ -1,7 +1,7 @@
 {
   "name": "viniciusyr",
   "account_id": "4359d59f1f68b028b6680acf8fc307a0",
-  "main": "./.cloudflare/worker",
+  "main": "./.cloudflare/worker.js",
   "compatibility_date": "2026-07-18",
   "site": {
     "bucket": "./.cloudflare/public"
