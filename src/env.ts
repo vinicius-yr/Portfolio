@@ -3,8 +3,6 @@ import * as v from "valibot"
 
 export const variables = defineEnvVars({
   RESEND_API_KEY: {
-    schema: v.pipe(
-      v.string()
-    )
+    schema: v.string()
   },
 })

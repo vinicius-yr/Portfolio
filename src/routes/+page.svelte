@@ -7,7 +7,7 @@
 
     gsap.from("#title", {
       opacity: 0,
-      y:30,
+      y: 30,
       delay: 0.2,
     });
 

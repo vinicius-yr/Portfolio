@@ -3,6 +3,7 @@ import { form } from "$app/server";
 import { formTypeSchema } from "$lib/types/valibot";
 import { Resend } from "resend";
 
+
 const resend = new Resend(RESEND_API_KEY);
 
 export const sendMail = form(
