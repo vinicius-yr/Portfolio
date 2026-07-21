@@ -8,22 +8,11 @@
   import { projects } from "$lib/constants";
   import { Splide, SplideSlide } from "@splidejs/svelte-splide";
 
-  $effect(() => {
-    gsap.from("#splide", {
-      opacity: 0,
-      y: 30,
-      duration: 0.5,
-    });
-  });
-</script>
-
-<Splide
-  id="splide"
-  options={{
+  const options = {
     type: "loop",
     gap: "2rem",
-    width: "60rem",
-    padding: "5.5rem",
+    width: "75rem",
+    padding: "5rem",
     autoplay: true,
     arrows: false,
     interval: 2000,
@@ -40,8 +29,18 @@
         width: "22rem",
       },
     },
-  }}
->
+  };
+
+  $effect(() => {
+    gsap.from("#splide", {
+      opacity: 0,
+      y: 30,
+      duration: 0.5,
+    });
+  });
+</script>
+
+<Splide id="splide" {options}>
   {#each projects as { href, github, description, name, src }}
     <SplideSlide>
       <div class="flex flex-col justify-between gap-3 border rounded-sm p-3">
@@ -52,7 +51,7 @@
 
         <div>
           <a {href} aria-label={src}>
-            <img {src} alt="" />
+            <img {src} alt={src} width="1280" height="720" fetchpriority="high"/>
           </a>
         </div>
 
